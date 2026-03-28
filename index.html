@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essence & Aura | Luxury Fragrances</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-stone-50 text-stone-900 font-sans">
+
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-serif tracking-widest uppercase">Essence & Aura</h1>
+            <div class="flex gap-6 items-center">
+                <a href="#" class="hover:text-amber-700 transition">Shop</a>
+                <button onclick="toggleCart()" class="relative">
+                    <i class="fa-solid fa-bag-shopping text-xl"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-amber-700 text-white text-[10px] rounded-full h-4 w-4 flex items-center justify-center">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="py-20 text-center bg-stone-100">
+        <h2 class="text-4xl md:text-6xl font-serif mb-4">Discover Your Signature</h2>
+        <p class="text-stone-500 max-w-md mx-auto italic">Curated scents for the modern minimalist.</p>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10" id="product-grid">
+            </div>
+    </main>
+
+    <div id="cart-sidebar" class="fixed inset-y-0 right-0 w-80 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-[60] p-6">
+        <div class="flex justify-between items-center mb-8">
+            <h3 class="text-xl font-bold uppercase tracking-tight">Your Bag</h3>
+            <button onclick="toggleCart()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div id="cart-items" class="space-y-4 mb-8 max-height-[60vh] overflow-y-auto">
+            </div>
+        <div class="border-t pt-4">
+            <div class="flex justify-between font-bold text-lg mb-4">
+                <span>Total:</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="w-full bg-stone-900 text-white py-3 rounded-sm hover:bg-amber-900 transition uppercase tracking-widest text-sm">
+                Checkout
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const products = [
+            { id: 1, name: "Midnight Rose", price: 120, img: "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=400" },
+            { id: 2, name: "Santal 33", price: 180, img: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=400" },
+            { id: 3, name: "Oceanic Mist", price: 95, img: "
